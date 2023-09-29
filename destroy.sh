@@ -17,4 +17,4 @@ docker network rm weather-app
 
 rm -rf backend/prisma/migrations
 
-docker system prune -a 2>/dev/null
+# docker system prune -a 2>/dev/null

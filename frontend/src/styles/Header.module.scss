@@ -1,0 +1,50 @@
+.header {
+  padding: 1rem;
+  background-color: #202b3b;
+
+  .mainLink {
+    width: 4.5rem;
+    height: 4.5rem;
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #35455e;
+    border-radius: 20px;
+
+    .mainIcon {
+      width: 2.5rem;
+      height: 2.5rem;
+      color: #dde0e5;
+    }
+  }
+
+  .linkList {
+    margin-top: 1.5rem;
+    padding: 0px;
+    list-style-type: none;
+
+    .linkBtn {
+      width: 4.5rem;
+      height: 4.5rem;
+      margin-top: 0.5rem;
+      flex: auto;
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // background-color: red;
+      border-radius: 20px;
+      color: #dde0e5;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+
+      .linkIcon {
+        width: 2rem;
+        height: 2rem;
+        color: #dde0e5;
+      }
+    }
+  }
+}
