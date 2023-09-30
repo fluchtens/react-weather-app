@@ -11,7 +11,7 @@ function Home() {
   useEffect(() => {
     async function getWeather() {
       try {
-        const data = await getCityWeather("Marche-lez-Ecausinnes");
+        const data = await getCityWeather("Brussels");
         setWeather(data);
       } catch (error) {
         console.error(error);
@@ -24,11 +24,9 @@ function Home() {
   return (
     <main className={styles.main}>
       <h1 className={styles.city}>{weather?.location.name}</h1>
-      <div className={styles.tempContainer}>
-        <h2 className={styles.temp}>{weather?.current.temp_c}°</h2>
-        <img src={weather?.current.condition.icon} />
-        <p className={styles.feelsLike}>{weather?.current.condition.text}</p>
-      </div>
+      <h2 className={styles.temp}>{weather?.current.temp_c}°</h2>
+      {/* <img src={weather?.current.condition.icon} />
+      <p className={styles.feelsLike}>{weather?.current.condition.text}</p> */}
       <TodayForecast weather={weather} />
       <CurrentDetails weather={weather} />
     </main>
