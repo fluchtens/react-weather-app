@@ -1,0 +1,51 @@
+.container {
+  margin-top: 1.5rem;
+  padding: 0.2rem 2.5rem 0.2rem 2.5rem;
+  background-color: #202b3b;
+  border-radius: 30px;
+
+  .title {
+    color: #939aa3;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .detailsList {
+    padding: 0;
+    flex: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    text-align: center;
+
+    .dataType {
+      flex: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: #939aa3;
+      }
+
+      .text {
+        margin: 0rem 0rem 0rem 0.5rem;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-weight: 600;
+        color: #939aa3;
+      }
+    }
+
+    .data {
+      margin: 1rem 0rem 0rem 0rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 600;
+    }
+  }
+}

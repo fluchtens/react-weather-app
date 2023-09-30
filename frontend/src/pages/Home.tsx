@@ -3,6 +3,7 @@ import { getCityWeather } from "../services/weather";
 import { Weather } from "../utils/weather.interface";
 import styles from "../styles/Home.module.scss";
 import TodayForecast from "../components/TodayForecast";
+import CurrentDetails from "../components/CurrentDetails";
 
 function Home() {
   const [weather, setWeather] = useState<Weather | null | undefined>(null);
@@ -32,6 +33,7 @@ function Home() {
         <p className={styles.feelsLike}>{weather?.current.condition.text}</p>
       </div>
       <TodayForecast weather={weather} />
+      <CurrentDetails weather={weather} />
     </main>
   );
 }
