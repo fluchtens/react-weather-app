@@ -1,8 +1,67 @@
 .main {
   width: 100vw;
-  margin: 1.5rem;
-  padding: 1.5rem;
-  border-radius: 30px;
-  background-color: #202b3b;
+  padding: 2rem;
+  // background-color: #39465a;
   text-align: center;
+
+  .city {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+  }
+
+  .tempContainer {
+    // background-color: #202b3b;
+
+    .temp {
+      margin: 0;
+      font-size: 6rem;
+      line-height: 1;
+      font-weight: 400;
+    }
+
+    .feelsLike {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-weight: 300;
+    }
+  }
+
+  .todayForecast {
+    padding: 0.2rem 2.5rem 0.2rem 2.5rem;
+    background-color: hsl(216, 30%, 18%);
+    border-radius: 30px;
+
+    .todayForecastTitle {
+      color: #939aa3;
+      text-align: left;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .todayForecastList {
+      padding: 0;
+      flex: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style-type: none;
+      text-align: center;
+
+      .forecastHour {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 600;
+        color: #939aa3;
+      }
+
+      .forecastTemp {
+        margin: 0;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: 600;
+      }
+    }
+  }
 }
