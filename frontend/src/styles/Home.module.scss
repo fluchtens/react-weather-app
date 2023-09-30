@@ -1,18 +1,6 @@
 .main {
-  width: 100vw;
+  width: 75vw;
+  margin: auto;
   padding: 2rem;
   // background-color: #39465a;
-  text-align: center;
-
-  .city {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    font-weight: 700;
-  }
-  .temp {
-    margin: 0;
-    font-size: 5rem;
-    line-height: 1;
-    font-weight: 300;
-  }
 }

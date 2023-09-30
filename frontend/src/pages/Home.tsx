@@ -4,6 +4,7 @@ import { Weather } from "../utils/weather.interface";
 import styles from "../styles/Home.module.scss";
 import TodayForecast from "../components/TodayForecast";
 import CurrentDetails from "../components/CurrentDetails";
+import CurrentWeather from "../components/CurrentWeather";
 
 function Home() {
   const [weather, setWeather] = useState<Weather | null | undefined>(null);
@@ -11,7 +12,7 @@ function Home() {
   useEffect(() => {
     async function getWeather() {
       try {
-        const data = await getCityWeather("Brussels");
+        const data = await getCityWeather("Marche-lez-ecaussinnes");
         setWeather(data);
       } catch (error) {
         console.error(error);
@@ -23,10 +24,7 @@ function Home() {
 
   return (
     <main className={styles.main}>
-      <h1 className={styles.city}>{weather?.location.name}</h1>
-      <h2 className={styles.temp}>{weather?.current.temp_c}°</h2>
-      {/* <img src={weather?.current.condition.icon} />
-      <p className={styles.feelsLike}>{weather?.current.condition.text}</p> */}
+      <CurrentWeather weather={weather} />
       <TodayForecast weather={weather} />
       <CurrentDetails weather={weather} />
     </main>
