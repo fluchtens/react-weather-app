@@ -4,6 +4,21 @@ import { FaWind, FaCloudSunRain } from "react-icons/fa6";
 import { LuSettings2 } from "react-icons/lu";
 import styles from "../styles/Header.module.scss";
 
+interface LinkButtonProps {
+  path: string;
+  text: string;
+  icon: React.ReactNode;
+}
+
+function LinkButton({ path, text, icon }: LinkButtonProps) {
+  return (
+    <Link to={path} className={styles.linkBtn}>
+      {icon}
+      {text}
+    </Link>
+  );
+}
+
 function Header() {
   return (
     <header className={styles.header}>
@@ -13,22 +28,25 @@ function Header() {
 
       <ul className={styles.linkList}>
         <li>
-          <Link to="/" className={styles.linkBtn}>
-            <FaCloudSunRain className={styles.linkIcon} />
-            Weather
-          </Link>
+          <LinkButton
+            path="/"
+            text="Weather"
+            icon={<FaCloudSunRain className={styles.linkIcon} />}
+          />
         </li>
         <li>
-          <Link to="/" className={styles.linkBtn}>
-            <AiOutlineUnorderedList className={styles.linkIcon} />
-            Cities
-          </Link>
+          <LinkButton
+            path="/"
+            text="Cities"
+            icon={<AiOutlineUnorderedList className={styles.linkIcon} />}
+          />
         </li>
         <li>
-          <Link to="/" className={styles.linkBtn}>
-            <LuSettings2 className={styles.linkIcon} />
-            Settings
-          </Link>
+          <LinkButton
+            path="/"
+            text="Settings"
+            icon={<LuSettings2 className={styles.linkIcon} />}
+          />
         </li>
       </ul>
     </header>
