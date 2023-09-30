@@ -30,7 +30,7 @@ function Home() {
         <p className={styles.feelsLike}>{weather?.current.condition.text}</p>
       </div>
       <TodayForecast weather={weather} />
-      {/* <CurrentDetails weather={weather} /> */}
+      <CurrentDetails weather={weather} />
     </main>
   );
 }

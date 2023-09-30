@@ -3,60 +3,60 @@
   padding: 0.2rem 2.5rem 0.2rem 2.5rem;
   background-color: #202b3b;
   border-radius: 30px;
-}
 
-.list {
-  padding: 0;
-  flex: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style-type: none;
-  text-align: center;
-}
+  .list {
+    padding: 0;
+    flex: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    text-align: center;
 
-.hour {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #939aa3;
-}
+    .hour {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #939aa3;
+    }
 
-.icon {
-  width: 4rem;
-  height: 4rem;
-}
+    .icon {
+      width: 4rem;
+      height: 4rem;
+    }
 
-.temp {
-  margin: 0;
-  font-size: 1.6rem;
-  font-weight: 600;
+    .temp {
+      margin: 0;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
 }
 
 @media (max-width: 768px) {
   .container {
     padding: 0.2rem 1.8rem 0rem 1.8rem;
-  }
 
-  .list {
-    flex-wrap: wrap;
-  }
+    .list {
+      flex-wrap: wrap;
 
-  .element {
-    margin-bottom: 1rem;
-    flex: 0 0 50%;
-  }
+      .element {
+        margin-bottom: 1rem;
+        flex: 0 0 50%;
 
-  .hour {
-    font-size: 0.9rem;
-  }
+        .hour {
+          font-size: 0.9rem;
+        }
 
-  .icon {
-    width: 3rem;
-    height: 3rem;
-  }
+        .icon {
+          width: 3rem;
+          height: 3rem;
+        }
 
-  .temp {
-    font-size: 1.2rem;
+        .temp {
+          font-size: 1.2rem;
+        }
+      }
+    }
   }
 }
