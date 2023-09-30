@@ -26,14 +26,11 @@ function Home() {
       <h1 className={styles.city}>{weather?.location.name}</h1>
       <div className={styles.tempContainer}>
         <h2 className={styles.temp}>{weather?.current.temp_c}°</h2>
-        <p className={styles.feelsLike}>
-          Feels like {weather?.current.feelslike_c}°
-        </p>
         <img src={weather?.current.condition.icon} />
         <p className={styles.feelsLike}>{weather?.current.condition.text}</p>
       </div>
       <TodayForecast weather={weather} />
-      <CurrentDetails weather={weather} />
+      {/* <CurrentDetails weather={weather} /> */}
     </main>
   );
 }
