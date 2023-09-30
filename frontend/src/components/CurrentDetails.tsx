@@ -1,12 +1,13 @@
 import { Weather } from "../utils/weather.interface";
 import { FaTemperatureLow, FaWind, FaSun } from "react-icons/fa6";
 import { IoWaterSharp } from "react-icons/io5";
+import ContainerTitle from "./ContainerTitle";
 import styles from "../styles/CurrentDetails.module.scss";
 
 function CurrentDetails({ weather }: { weather: Weather | null | undefined }) {
   return (
     <div className={styles.container}>
-      <p className={styles.title}>Current Details</p>
+      <ContainerTitle title="Current Details" />
       <ul className={styles.detailsList}>
         <li>
           <div className={styles.dataType}>

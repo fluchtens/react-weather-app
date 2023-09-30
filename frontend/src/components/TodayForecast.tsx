@@ -1,5 +1,6 @@
-import styles from "../styles/TodayForecast.module.scss";
 import { Weather } from "../utils/weather.interface";
+import ContainerTitle from "./ContainerTitle";
+import styles from "../styles/TodayForecast.module.scss";
 
 function HourlyForecast({ weather }: { weather: Weather | null | undefined }) {
   const forecastHours: number[] = [6, 9, 12, 15, 18, 21];
@@ -31,7 +32,7 @@ function HourlyForecast({ weather }: { weather: Weather | null | undefined }) {
 function TodayForecast({ weather }: { weather: Weather | null | undefined }) {
   return (
     <div className={styles.container}>
-      <p className={styles.title}>Today's Forecast</p>
+      <ContainerTitle title="Today's Forecast" />
       <HourlyForecast weather={weather} />
     </div>
   );
