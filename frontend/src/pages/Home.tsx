@@ -24,6 +24,7 @@ function Home() {
     async function getWeather() {
       if (city && trigger) {
         const data = await getCityWeather(city);
+        console.log(data);
         if (!data) {
           setCity("");
           return;
