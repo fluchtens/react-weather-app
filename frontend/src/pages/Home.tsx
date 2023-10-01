@@ -12,6 +12,12 @@ function Home() {
   const [city, setCity] = useState("Bruxelles");
   const [trigger, setTrigger] = useState(true);
 
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>): void => {
+    if (e.key === "Enter") {
+      setTrigger(true);
+    }
+  };
+
   useEffect(() => {
     async function getWeather() {
       try {
@@ -28,19 +34,9 @@ function Home() {
     setTrigger(false);
   }, [city, trigger]);
 
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>): void => {
-    if (e.key === "Enter") {
-      setTrigger(true);
-    }
-  };
-
   return (
     <main className={styles.main}>
-      <SearchBar
-        city={city}
-        onCityChange={setCity}
-        onKeyPress={handleKeyPress}
-      />
+      <SearchBar city={city} onChange={setCity} onKeyDown={handleKeyPress} />
       <CurrentWeather weather={weather} />
       <TodayForecast weather={weather} />
       <CurrentDetails weather={weather} />
