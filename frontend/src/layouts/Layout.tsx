@@ -6,7 +6,6 @@ import styles from "../styles/Layout.module.scss";
 
 function Layout() {
   const { pathname } = useLocation();
-  console.log(pathname);
 
   return (
     <>
