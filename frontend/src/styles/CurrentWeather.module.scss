@@ -1,32 +1,79 @@
 .container {
+  margin-top: 1.5rem;
   padding: 1rem 2.5rem 1rem 2.5rem;
-  // background-color: #202b3b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #202b3b;
   border-radius: 30px;
-  text-align: center;
 
-  .city {
-    margin: 0 0 1rem 0;
-    font-size: 1.875rem;
-    font-weight: 700;
+  .location {
+    text-align: left;
+
+    .city {
+      margin: 0;
+      font-size: 1.7rem;
+      font-weight: 700;
+    }
+
+    .country {
+      margin: 0.5rem 0 0 0;
+      font-size: 1rem;
+      font-weight: 400;
+    }
   }
 
-  .temp {
-    margin: 0;
-    font-size: 4rem;
-    font-weight: 300;
+  .condition {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+
+    .icon {
+      margin: 0;
+      width: 4rem;
+      height: 4rem;
+    }
+
+    .temp {
+      margin: 0 0 0 0.5rem;
+      font-size: 4rem;
+      font-weight: 300;
+    }
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    .city {
-      font-size: 1.2rem;
-      font-weight: 500;
+    flex-direction: column;
+
+    .location {
+      text-align: center;
+
+      .city {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      .country {
+        font-size: 0.8rem;
+        font-weight: 300;
+      }
     }
 
-    .temp {
-      font-size: 3.5rem;
-      font-weight: 200;
+    .condition {
+      flex-direction: column;
+      text-align: center;
+
+      .icon {
+        margin: 0.5rem 0 0 0;
+      }
+
+      .temp {
+        margin: 0;
+        font-size: 3rem;
+        font-weight: 200;
+      }
     }
   }
 }
