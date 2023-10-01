@@ -22,19 +22,15 @@ function Home() {
 
   useEffect(() => {
     async function getWeather() {
-      try {
-        if (city && trigger) {
-          const data = await getCityWeather(city);
-          if (!data) {
-            setCity("");
-            return;
-          }
-          setWeather(data);
+      if (city && trigger) {
+        const data = await getCityWeather(city);
+        if (!data) {
           setCity("");
-          localStorage.setItem("lastCity", city);
+          return;
         }
-      } catch (error) {
-        console.error("catch component");
+        setWeather(data);
+        setCity("");
+        localStorage.setItem("lastCity", city);
       }
     }
     getWeather();
