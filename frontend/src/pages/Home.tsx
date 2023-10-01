@@ -9,7 +9,9 @@ import CurrentWeather from "../components/CurrentWeather";
 
 function Home() {
   const [weather, setWeather] = useState<Weather | null | undefined>(null);
-  const [city, setCity] = useState("Bruxelles");
+  const [city, setCity] = useState(
+    localStorage.getItem("lastCity") || "Bruxelles"
+  );
   const [trigger, setTrigger] = useState(true);
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>): void => {
@@ -23,11 +25,16 @@ function Home() {
       try {
         if (city && trigger) {
           const data = await getCityWeather(city);
+          if (!data) {
+            setCity("");
+            return;
+          }
           setWeather(data);
           setCity("");
+          localStorage.setItem("lastCity", city);
         }
       } catch (error) {
-        console.error(error);
+        console.error("catch component");
       }
     }
     getWeather();
