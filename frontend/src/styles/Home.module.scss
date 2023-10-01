@@ -2,5 +2,11 @@
   width: 75vw;
   margin: auto;
   padding: 2rem;
-  // background-color: #39465a;
+}
+
+@media (max-width: 768px) {
+  .main {
+    width: 100vh;
+    padding: 1rem;
+  }
 }
