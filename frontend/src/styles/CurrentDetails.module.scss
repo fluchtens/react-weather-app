@@ -1,6 +1,6 @@
 .container {
   margin-top: 1.5rem;
-  padding: 0.2rem 2.5rem 0.2rem 2.5rem;
+  padding: 0.5rem 2.5rem 0.5rem 2.5rem;
   background-color: #202b3b;
   border-radius: 30px;
 
@@ -43,7 +43,8 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 0.2rem 1.8rem 0rem 1.8rem;
+    margin-top: 0.5rem;
+    border-radius: 15px;
 
     .list {
       flex-direction: column;

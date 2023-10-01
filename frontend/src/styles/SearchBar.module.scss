@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: left;
   background-color: #202b3b;
-  border-radius: 20px;
+  border-radius: 30px;
 
   .searchBar {
     width: 100%;
@@ -17,5 +17,11 @@
   }
   .searchBar::placeholder {
     color: #939aa3;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    border-radius: 15px;
   }
 }
