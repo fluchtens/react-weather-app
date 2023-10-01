@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getCityWeather } from "../services/weather";
 import { Weather } from "../utils/weather.interface";
 import styles from "../styles/Home.module.scss";
+import SearchBar from "../components/SearchBar";
 import TodayForecast from "../components/TodayForecast";
 import CurrentDetails from "../components/CurrentDetails";
 import CurrentWeather from "../components/CurrentWeather";
@@ -35,16 +36,11 @@ function Home() {
 
   return (
     <main className={styles.main}>
-      <div className={styles.container}>
-        <input
-          className={styles.searchBar}
-          type="text"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-          onKeyPress={handleKeyPress}
-          placeholder="Search a city"
-        />
-      </div>
+      <SearchBar
+        city={city}
+        onCityChange={setCity}
+        onKeyPress={handleKeyPress}
+      />
       <CurrentWeather weather={weather} />
       <TodayForecast weather={weather} />
       <CurrentDetails weather={weather} />
