@@ -5,7 +5,6 @@
   .mainLink {
     width: 4.5rem;
     height: 4.5rem;
-    flex: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,23 +27,25 @@
       width: 4.5rem;
       height: 4.5rem;
       margin-top: 0.5rem;
-      flex: auto;
       flex-direction: column;
       display: flex;
       justify-content: center;
       align-items: center;
-      // background-color: #35455e;
-      border-radius: 20px;
-      color: #dde0e5;
       text-decoration: none;
       font-size: 0.8rem;
       font-weight: 600;
+      color: #dde0e5;
 
       .linkIcon {
         width: 2rem;
         height: 2rem;
-        color: #dde0e5;
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: none;
   }
 }

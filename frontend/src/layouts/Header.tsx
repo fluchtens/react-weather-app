@@ -6,18 +6,16 @@ import styles from "../styles/Header.module.scss";
 
 interface LinkButtonProps {
   path: string;
-  text: string;
+  label: string;
   icon: React.ReactNode;
 }
 
-function LinkButton({ path, text, icon }: LinkButtonProps) {
-  return (
-    <Link to={path} className={styles.linkBtn}>
-      {icon}
-      {text}
-    </Link>
-  );
-}
+const LinkButton = ({ path, label, icon }: LinkButtonProps) => (
+  <Link to={path} className={styles.linkBtn}>
+    {icon}
+    {label}
+  </Link>
+);
 
 function Header() {
   return (
@@ -30,21 +28,21 @@ function Header() {
         <li>
           <LinkButton
             path="/"
-            text="Weather"
+            label="Weather"
             icon={<FaCloudSunRain className={styles.linkIcon} />}
           />
         </li>
         <li>
           <LinkButton
             path="/"
-            text="Cities"
+            label="Cities"
             icon={<AiOutlineUnorderedList className={styles.linkIcon} />}
           />
         </li>
         <li>
           <LinkButton
             path="/"
-            text="Settings"
+            label="Settings"
             icon={<LuSettings2 className={styles.linkIcon} />}
           />
         </li>

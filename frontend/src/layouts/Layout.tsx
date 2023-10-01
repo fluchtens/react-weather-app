@@ -12,7 +12,7 @@ function Layout() {
     <>
       <div className={styles.container}>
         <div className={styles.top}>
-          {/* <Header /> */}
+          <Header />
           {pathname === "/" ? <Home /> : <Outlet />}
         </div>
         {/* <Footer /> */}
