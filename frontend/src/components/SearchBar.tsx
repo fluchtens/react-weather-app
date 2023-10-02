@@ -6,7 +6,7 @@ interface SearchBarProps {
   onKeyDown: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 }
 
-function SearchBar({ city, onChange, onKeyDown }: SearchBarProps): JSX.Element {
+function SearchBar({ city, onChange, onKeyDown }: SearchBarProps) {
   return (
     <div className={styles.container}>
       <input
