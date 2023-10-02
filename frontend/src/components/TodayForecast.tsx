@@ -12,7 +12,7 @@ function HourlyForecast({ weather }: { weather: Weather | null | undefined }) {
         const displayPeriod = hour >= 12 ? "PM" : "AM";
 
         return (
-          <li className={styles.element}>
+          <li className={styles.element} key={hour}>
             <p className={styles.hour}>
               {`${displayHour}:00 ${displayPeriod}`}
             </p>
