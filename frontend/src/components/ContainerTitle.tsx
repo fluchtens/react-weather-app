@@ -1,7 +1,9 @@
 import styles from "../styles/ContainerTitle.module.scss";
 
-function ContainerTitle({ title }: { title: string }) {
-  return <p className={styles.title}>{title}</p>;
+interface ContainerTitleProps {
+  title: string;
 }
 
-export default ContainerTitle;
+export const ContainerTitle = ({ title }: ContainerTitleProps) => (
+  <p className={styles.title}>{title}</p>
+);

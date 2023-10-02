@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { getCityWeather } from "../services/weather";
 import { Weather } from "../utils/weather.interface";
 import styles from "../styles/Home.module.scss";
-import SearchBar from "../components/SearchBar";
-import CurrentWeather from "../components/CurrentWeather";
-import TodayForecast from "../components/TodayForecast";
-import CurrentDetails from "../components/CurrentDetails";
+import { SearchBar } from "../components/SearchBar";
+import { CurrentWeather } from "../components/CurrentWeather";
+import { TodayForecast } from "../components/TodayForecast";
+import { CurrentDetails } from "../components/CurrentDetails";
 
 function Home() {
   const [weather, setWeather] = useState<Weather | null | undefined>(null);

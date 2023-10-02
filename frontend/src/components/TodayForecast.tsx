@@ -1,8 +1,12 @@
 import { Weather } from "../utils/weather.interface";
-import ContainerTitle from "./ContainerTitle";
+import { ContainerTitle } from "./ContainerTitle";
 import styles from "../styles/TodayForecast.module.scss";
 
-function HourlyForecast({ weather }: { weather: Weather | null | undefined }) {
+const HourlyForecast = ({
+  weather,
+}: {
+  weather: Weather | null | undefined;
+}) => {
   const forecastHours: number[] = [6, 9, 12, 15, 18, 21];
 
   return (
@@ -28,15 +32,15 @@ function HourlyForecast({ weather }: { weather: Weather | null | undefined }) {
       })}
     </ul>
   );
-}
+};
 
-function TodayForecast({ weather }: { weather: Weather | null | undefined }) {
-  return (
-    <div className={styles.container}>
-      <ContainerTitle title="Today's Forecast" />
-      <HourlyForecast weather={weather} />
-    </div>
-  );
-}
-
-export default TodayForecast;
+export const TodayForecast = ({
+  weather,
+}: {
+  weather: Weather | null | undefined;
+}) => (
+  <div className={styles.container}>
+    <ContainerTitle title="Today's Forecast" />
+    <HourlyForecast weather={weather} />
+  </div>
+);
