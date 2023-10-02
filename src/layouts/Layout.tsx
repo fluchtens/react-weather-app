@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Home from "../pages/Home";
-import Footer from "./Footer";
-import Header from "./Header";
+// import Footer from "./Footer";
+// import Header from "./Header";
 import styles from "../styles/Layout.module.scss";
 
 function Layout() {
