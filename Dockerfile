@@ -2,6 +2,8 @@ FROM node:lts-alpine
 
 RUN apk update && apk add nginx && npm install -g pnpm
 
+WORKDIR /app
+
 COPY package.json pnpm-lock.yaml ./
 RUN pnpm install
 COPY ./ ./

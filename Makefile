@@ -1,8 +1,13 @@
 all: run
 
-build:
-	docker build -t react-weather-app .
+NAME = react-weather-app
 
-run: build
-	docker run -p 80:80 react-weather-app
+build:
+	docker build -t ${NAME} .
+
+run:
+	docker run -d -p 80:80 --name ${NAME} ${NAME}
+
+clean:
+	docker stop ${NAME} && docker rm ${NAME} && docker rmi ${NAME}
 
