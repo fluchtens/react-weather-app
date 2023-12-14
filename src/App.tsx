@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "./layouts/Layout";
-import Error from "./pages/Error";
+import Layout from "./components/layouts/Layout";
+import Error from "./components/pages/Error";
 
 function App() {
   const router = createBrowserRouter([
@@ -10,11 +10,7 @@ function App() {
       errorElement: <Error />,
     },
   ]);
-  return (
-    <>
-      <RouterProvider router={router} />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

@@ -1,5 +1,3 @@
-import styles from "../styles/SearchBar.module.scss";
-
 interface SearchBarProps {
   city: string;
   onChange: (city: string) => void;
@@ -7,14 +5,14 @@ interface SearchBarProps {
 }
 
 export const SearchBar = ({ city, onChange, onKeyDown }: SearchBarProps) => (
-  <div className={styles.container}>
+  <section className="py-1 px-6 rounded-2xl md:rounded-full bg-secondary">
     <input
-      className={styles.searchBar}
+      className="w-full h-12 bg-transparent outline-none placeholder-font2"
       type="text"
       value={city}
       onChange={(e) => onChange(e.target.value)}
       onKeyDown={onKeyDown}
       placeholder="Search a city"
     />
-  </div>
+  </section>
 );
