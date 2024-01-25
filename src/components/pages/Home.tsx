@@ -23,7 +23,6 @@ export default function Home() {
     const fetchData = async () => {
       if (city && trigger) {
         const data = await getCityWeatherApi(city);
-        console.log(data);
         if (!data) {
           return;
         }

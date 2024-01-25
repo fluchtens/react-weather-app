@@ -7,6 +7,11 @@ export async function getCityWeatherApi(
   city: string
 ): Promise<Weather | null | undefined> {
   try {
+    if (!API_URL || !API_KEY) {
+      throw new Error(
+        "Missing API url or key, please set environment variables."
+      );
+    }
     const response = await fetch(
       `${API_URL}/forecast.json?key=${API_KEY}&q=${encodeURIComponent(
         city

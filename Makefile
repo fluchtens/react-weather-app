@@ -1,13 +1,15 @@
-all: run
+all: build
 
-NAME = react-weather-app
+build: clean
+	docker-compose up -d --build
 
-build:
-	docker build -t ${NAME} .
+up: down
+	docker-compose up -d
 
-run:
-	docker run -d -p 80:80 --name ${NAME} ${NAME}
+down:
+	docker-compose down
 
 clean:
-	docker stop ${NAME} && docker rm ${NAME} && docker rmi ${NAME}
+	docker-compose down --rmi all --volumes
 
+.PHONY: all build up down clean

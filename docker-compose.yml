@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  app:
+    container_name: react-weather-app
+    image: react-weather-app
+    env_file:
+      - .env
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 8081:8081
+    networks:
+      - react_weather_app_network
+    restart: always
+
+networks:
+  react_weather_app_network:
+    name: react_weather_app_network

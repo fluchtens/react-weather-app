@@ -12,7 +12,6 @@ RUN pnpm run build
 
 COPY nginx.conf /etc/nginx/http.d/default.conf
 
-EXPOSE 80
+EXPOSE 8081
 
-# Starts application
 CMD ["nginx", "-g", "daemon off;"]
