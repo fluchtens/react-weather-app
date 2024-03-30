@@ -20,4 +20,4 @@ VITE_WEATHER_API_KEY=
 - Run ```pnpm run dev``` to start the application in development mode.   
 - Run ```make``` to start the application in production mode with docker.
 
-![screenshot01](public/screenshot.png)
+![screenshot01](https://fluchtens.com/projects/react-weather-app/react-weather-app_1.webp)
